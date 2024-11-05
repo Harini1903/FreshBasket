@@ -12,8 +12,8 @@ db_config = {
     'host': 'database-2.cb2iw6syu7i9.eu-north-1.rds.amazonaws.com',
     'user': 'admin',
     'password': 'Aparna456123',  # Update with your actual password
-    'database': 'database-2'
-    'port': '3306'# Update with your actual database name
+    'database': 'ecommerce_platform',
+    'port': '3306',# Update with your actual database name
 }
 
 # Connection pool setup
