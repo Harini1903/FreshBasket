@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Basket - User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>User Dashboard</h2>
+    <div class="accordion" id="orderAccordion">
+      <!-- Sample Order Accordion -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#order1" aria-expanded="true">
+            Order #1 - $100.00
+          </button>
+        </h2>
+        <div id="order1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <strong>Items:</strong> Item 1, Item 2<br>
+            <strong>Status:</strong> Yet to Ship
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
