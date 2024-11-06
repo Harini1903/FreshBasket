@@ -4,6 +4,7 @@ from datetime import datetime
 import mysql.connector.pooling
 import secrets
 
+# Flask application configuration
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
@@ -13,7 +14,7 @@ db_config = {
     'user': 'admin',
     'password': 'Aparna456123',  # Update with your actual password
     'database': 'ecommerce_platform',
-    'port': '3306',# Update with your actual database name
+    'port': '3306',  # Update with your actual database port if different
 }
 
 # Connection pool setup
@@ -246,7 +247,7 @@ def admin_dashboard():
         return redirect(url_for('home'))
 
     cursor = conn.cursor(dictionary=True)
-    cursor.execute('''
+    cursor.execute(''' 
         SELECT o.id, o.total_price, o.status, o.order_date, u.name AS user_name,
         GROUP_CONCAT(CONCAT(oi.item_name, ' (x', oi.quantity, ')') SEPARATOR ', ') AS items
         FROM orders o
@@ -261,4 +262,5 @@ def admin_dashboard():
     return render_template('admin_dashboard.html', orders=orders)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000) 
+    app.run(host="0.0.0.0", port=5000,debug=True)
+

@@ -13,6 +13,20 @@
       margin-top: 100px;
       text-align: center;
     }
+    .intro-section {
+      margin-top: 50px;
+    }
+    .intro-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .intro-text {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -33,6 +47,15 @@
     <h1>Welcome to Fresh Basket!</h1>
     <p>Your one-stop solution for fresh groceries.</p>
     <a href="/shop" class="btn btn-success btn-lg mt-3">Start Shopping</a>
+    
+    <div class="intro-section">
+      <img src="{{ url_for('static', filename='images/fresh_groceries.png')}}" alt="Fresh Groceries">
+      <div class="intro-text">
+        <h2>Why Choose Fresh Basket?</h2>
+        <p>At Fresh Basket, we prioritize quality and freshness, ensuring that every item you purchase meets our high standards. Our mission is to bring farm-fresh produce directly to your doorstep, making grocery shopping convenient, affordable, and accessible for everyone.</p>
+        <p>From organic fruits and vegetables to locally sourced dairy products, we cater to all your grocery needs. With a focus on sustainability and community, Fresh Basket supports local farmers and promotes healthy living. Join us on a journey towards fresher, healthier choices!</p>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
